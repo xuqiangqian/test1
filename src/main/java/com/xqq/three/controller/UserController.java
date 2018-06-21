@@ -31,11 +31,7 @@ public class UserController {
         return userService.list();
     }
 
-    /**
-     * 添加用户
-     * @param entity
-     * @return
-     */
+
 //    @RequestMapping(value = "/save",method = RequestMethod.GET)
 //    public UserEntity save(UserEntity entity) {
 //        return userJPA.save(entity);
