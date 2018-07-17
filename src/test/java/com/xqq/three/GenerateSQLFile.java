@@ -9,7 +9,7 @@ import java.util.Random;
  * @Description:
  */
 public class GenerateSQLFile {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         try {
             File file = new File("d:" + File.separator + "test.sql");
             OutputStream out = new FileOutputStream(file, true); // 声明字节输出流
@@ -36,5 +36,8 @@ public class GenerateSQLFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
 }

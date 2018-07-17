@@ -1,6 +1,7 @@
 package com.xqq.three.controller;
 
 import com.xqq.three.JPA.UserJPA;
+import com.xqq.three.annotation.LogRecord;
 import com.xqq.three.entity.UserEntity;
 import com.xqq.three.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,9 @@ public class UserController {
      * 查询用户列表
      * @return
      */
+
     @RequestMapping(value = "/list",method = RequestMethod.GET)
+    @LogRecord(value = "用户列表")
     public List<UserEntity> list() {
         return userService.list();
     }

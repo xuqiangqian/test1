@@ -15,7 +15,7 @@ public class PrintTask {
     /**
      * 每小时的21分执行该方法
      */
-    @Scheduled(cron = "0 21 * * * *")
+    @Scheduled(cron = "0 44 * * * *")
     public void cron() throws  Exception{
         System.out.println("执行测试cron时间："+ new Date(System.currentTimeMillis()));
     }

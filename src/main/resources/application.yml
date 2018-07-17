@@ -48,12 +48,15 @@ spring:
               max-idle: 8
     # 连接超时时间（毫秒）
           timeout: 0
-  jpa:
-    database: MySQL
-    show-sql: true
-    hibernate:
-      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-      ddl-auto: update
+#  jpa:
+#    database: MySQL
+#    show-sql: true
+#    hibernate:
+#      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#      ddl-auto: update
+  mybatis:
+    configuration:
+       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   thymeleaf:
     suffix: .jsp
   http:
