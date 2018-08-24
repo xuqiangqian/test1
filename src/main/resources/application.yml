@@ -5,7 +5,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8
     username: root
-    password: root
+    password: 123456
     #最大活跃数
     maxActive: 20
     #初始化数量
@@ -54,9 +54,11 @@ spring:
 #    hibernate:
 #      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
 #      ddl-auto: update
-  mybatis:
-    configuration:
-       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.winter.model  # 注意：对应实体类的路径
+
   thymeleaf:
     suffix: .jsp
   http:
